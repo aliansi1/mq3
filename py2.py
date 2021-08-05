@@ -1,7 +1,7 @@
-import os
-import sys
+import streamlit as st
+from streamlit_ace import st_ace
 
-print("This line will be printed.")
+st.write("hello")
 
 
  
