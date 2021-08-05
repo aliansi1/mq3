@@ -1,4 +1,6 @@
 import paho.mqtt.client as mqtt
+import streamlit as st
+
 #import context  # Ensures paho is in PYTHONPATH
 
 
@@ -11,7 +13,7 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("gammvert/pithiviers/BBB")
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-    print(msg.topic+" "+str(msg.payload))
+   st.write(msg.topic+" "+str(msg.payload))
    
  
 
