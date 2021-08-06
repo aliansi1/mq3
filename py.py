@@ -1,4 +1,3 @@
-import simplejson
 import paho.mqtt.client as mqtt
 #import context  # Ensures paho is in PYTHONPATH
 import paho.mqtt.publish as publish
