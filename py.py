@@ -9,10 +9,12 @@ def do_something(sc):
     msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': "aaaaaaaa"}, ("gammvert/pithiviers/BBB", "bbbbbb", 0, False)]
     publish.multiple(msgs, hostname="broker.mqtt-dashboard.com")  
     # do your stuff
-    POST={}
-    args=sys.stdin.read().split('&')
-    for arg in args:
-     st.write(arg.split('=') )
+    
+@view_config(route_name='newusers', renderer='json')
+def newusers(self):
+    name =  str(self.request.POST.get('ee'))
+    st.write(name)
+    return name 
  
 
 client = mqtt.Client()
