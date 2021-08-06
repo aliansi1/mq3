@@ -3,7 +3,6 @@ import paho.mqtt.client as mqtt
 #import context  # Ensures paho is in PYTHONPATH
 import paho.mqtt.publish as publish
 import streamlit as st 
-import requests as request
 import sys
 
 def do_something(sc): 
@@ -14,7 +13,7 @@ def do_something(sc):
     POST={}
     args=sys.stdin.read().split('&')
     for arg in args:
-    st.write(arg.split('=') )
+     st.write(arg.split('=') )
  
 
 client = mqtt.Client()
