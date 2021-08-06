@@ -6,16 +6,6 @@ import streamlit as st
 import requests as request
 import sys
 
-def parse_args(args):
-    parser = argparse.ArgumentParser('Data Diagnostics')
-    return parser.parse_args(args)
-
-
-@st.cache
- 
-
-
-
 def do_something(sc): 
     #print("Doing stuff...")
     msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': "aaaaaaaa"}, ("gammvert/pithiviers/BBB", "bbbbbb", 0, False)]
