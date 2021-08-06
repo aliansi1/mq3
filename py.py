@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 #import context  # Ensures paho is in PYTHONPATH
 import paho.mqtt.publish as publish
 import streamlit as st 
-import requests
+import requests as request
 
 def do_something(sc): 
     #print("Doing stuff...")
