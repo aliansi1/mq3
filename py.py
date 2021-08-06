@@ -4,7 +4,6 @@ import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
 import streamlit as st 
 import requests as request
-import argparse
 import sys
 
 def parse_args(args):
@@ -22,8 +21,11 @@ def do_something(sc):
     msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': "aaaaaaaa"}, ("gammvert/pithiviers/BBB", "bbbbbb", 0, False)]
     publish.multiple(msgs, hostname="broker.mqtt-dashboard.com")  
     # do your stuff
-    args = parse_args(sys.argv[1:])
-    st.write( args )
+    POST={}
+    args=sys.stdin.read().split('&')
+    for arg in args:
+    st.write(arg.split('=') )
+ 
 
 client = mqtt.Client()
 client.connect("broker.mqtt-dashboard.com", 1883, 60)    
