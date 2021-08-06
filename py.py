@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def refresh():
+    st.write("okk")
     params = {
         'thing1': request.values.get('ee'),
         'thing2': request.get_json().get('55')
