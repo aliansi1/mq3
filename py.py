@@ -2,9 +2,15 @@ import paho.mqtt.client as mqtt
 #import context  # Ensures paho is in PYTHONPATH
 import paho.mqtt.publish as publish
 import streamlit as st 
-import requests as rq
+from flask import request
 
-@py.route('/do_something', methods=['GET', 'POST'])
+
+@app.route("/lookupmember", methods=["POST"])
+def lookupmember():
+    member = request.data
+   st.write(member)
+    return jsonify(member.decode("utf-8"))
+
 def do_something(sc): 
     #print("Doing stuff...")
     msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': "aaaaaaaa"}, ("gammvert/pithiviers/BBB", "bbbbbb", 0, False)]
