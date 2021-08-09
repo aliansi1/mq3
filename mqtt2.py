@@ -5,7 +5,7 @@ import sched, time
 s = sched.scheduler(time.time, time.sleep)
 def do_something(sc): 
     #print("Doing stuff...")
-    msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': "aaaaaaaa"}, ("gammvert/pithiviers/BBB", "bbbbbb", 0, False)]
+    msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': "aaaaaaaa"}, ("gammvert/pithiviers/BBB", "bbbbbbNEW HANID", 0, False)]
     publish.multiple(msgs, hostname="broker.mqtt-dashboard.com")  
     # do your stuff
     s.enter(1, 1, do_something, (sc,))
