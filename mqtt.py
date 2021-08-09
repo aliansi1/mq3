@@ -13,7 +13,7 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("gammvert/pithiviers/BBB")
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-   st.write(msg.topic+" "+str(msg.payload))
+   st.write(msg.topic+" التوبك وصل ياشباب"+str(msg.payload))
    
  
 
