@@ -7,7 +7,7 @@ s = sched.scheduler(time.time, time.sleep)
 def do_something(sc): 
      url = 'https://api.jsonbin.io/b/6137cac49548541c29add347/latest'
      headers = {
-    'X-Master-Key': $2b$10$5WeMJUgq7AAwROqsNxc68.TdR8UNsxB8VWxBZ6Fs3siF0LF0we8tm'
+    'X-Master-Key': '$2b$10$5WeMJUgq7AAwROqsNxc68.TdR8UNsxB8VWxBZ6Fs3siF0LF0we8tm'
     }
     req = requests.get(url, json=None, headers=headers)
     print(req.text)
