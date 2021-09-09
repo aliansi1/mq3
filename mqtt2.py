@@ -13,7 +13,7 @@ def do_something(sc):
      conn.request("GET", "/v1/projects/inlaid-particle-296016/databases/(default)/documents/c/doc1?key=AIzaSyCCIHwUPFBFve6bjRrkclHmGpoNfsvy2sM", payload, headers)
      res = conn.getresponse()
      data = res.read()
-     print(data.decode("utf-8"))
+     #print(data.decode("utf-8"))
     #print("Doing stuff...")
     #msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': data.decode("utf-8")}, ("gammvert/pithiviers/BBB", "bbbbbbNEW HANID", 0, False)]
      client.publish("gammvert/pithiviers/AAA", data.decode("utf-8"))  
