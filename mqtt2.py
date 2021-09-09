@@ -16,7 +16,7 @@ def do_something(sc):
      #print(data.decode("utf-8"))
     #print("Doing stuff...")
     #msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': data.decode("utf-8")}, ("gammvert/pithiviers/BBB", "bbbbbbNEW HANID", 0, False)]
-     client.publish("gammvert/pithiviers/AAA", data.decode("utf-8"))  
+     client.publish("send/to/LGLS7752a1d2e6", data.decode("utf-8"))  
     # do your stuff
      s.enter(1, 1, do_something, (sc,))
 
