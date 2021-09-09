@@ -3,16 +3,20 @@ import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
 import sched, time
 import requests
+import http.client
+
 s = sched.scheduler(time.time, time.sleep)
 def do_something(sc): 
-     url = 'https://api.jsonbin.io/b/6137cac49548541c29add347/latest'
-     headers = {
-    'X-Master-Key': '$2b$10$5WeMJUgq7AAwROqsNxc68.TdR8UNsxB8VWxBZ6Fs3siF0LF0we8tm' }
-     req = requests.get(url, json=None, headers=headers)
-     print(req.text)
+     conn = http.client.HTTPSConnection("firestore.googleapis.com")
+     payload = ''
+     headers = {}
+     conn.request("GET", "/v1/projects/inlaid-particle-296016/databases/(default)/documents/c/doc1?key=AIzaSyCCIHwUPFBFve6bjRrkclHmGpoNfsvy2sM", payload, headers)
+     res = conn.getresponse()
+     data = res.read()
+     print(data.decode("utf-8"))
     #print("Doing stuff...")
-    #msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': req.text}, ("gammvert/pithiviers/BBB", "bbbbbbNEW HANID", 0, False)]
-     client.publish("gammvert/pithiviers/AAA", req.text)  
+    #msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': data.decode("utf-8")}, ("gammvert/pithiviers/BBB", "bbbbbbNEW HANID", 0, False)]
+     client.publish("gammvert/pithiviers/AAA", data.decode("utf-8"))  
     # do your stuff
      s.enter(1, 1, do_something, (sc,))
 
@@ -22,6 +26,9 @@ s.enter(3, 1, do_something, (s,))
 s.run()
 
 
+
+
+ 
 
 
  
