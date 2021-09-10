@@ -30,7 +30,7 @@ def do_something(sc):
   }"
   client.publish("send/to/LGLS7752a1d2e6", ini_string)  
     # do your stuff
-     s.enter(1, 1, do_something, (sc,))
+  s.enter(1, 1, do_something, (sc,))
 
 client = mqtt.Client()
 client.connect("broker.mqtt-dashboard.com", 1883, 60)    
