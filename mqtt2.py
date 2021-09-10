@@ -28,7 +28,7 @@ def do_something(sc):
   'active':'"+data.decode("utf-8")+"',  'brgtotal':'9999'
   }
   }"
-  client.publish("send/to/LGLS7752a1d2e6", ini_string)  
+  client.publish("send/to/LGLS7752a1d2e6palm", ini_string)  
     # do your stuff
   s.enter(1, 1, do_something, (sc,))
 
