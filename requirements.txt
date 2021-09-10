@@ -1,3 +1,3 @@
-paho-mqtt>=1.5.1
+paho-mqtt=1.2
 http.client
 streamlit==0.79.0 # will fail on RPi, comment out
