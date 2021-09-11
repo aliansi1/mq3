@@ -15,13 +15,12 @@ def do_something(sc):
      #print(data.decode("utf-8"))
     #print("Doing stuff...")
     #msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': data.decode("utf-8")}, ("gammvert/pithiviers/BBB", "bbbbbbNEW HANID", 0, False)]
-  conn = http.client.HTTPSConnection("mikmon2.000webhostapp.com")
-  payload = ''
+  
+  url = "https://mikmon2.000webhostapp.com/LGLS7752a1d2e62.php"
+  payload={}
   headers = {}
-  conn.request("GET", "/LGLS7752a1d2e62.php", payload, headers)
-  res = conn.getresponse()
-  data = res.read()
-  #print(data.decode("utf-8"))
+  response = requests.request("GET", url, headers=headers, data=payload)
+  #print(response.text)
   ini_string = "{ 'LGLS7752a1d2e6':{  'active':'"+data.decode("utf-8")+"',  'brgtotal':'9999'  }  }"
   client.publish("send/to/LGLS7752a1d2e6palm", ini_string)  
   print(data.decode("utf-8"))
