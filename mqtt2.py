@@ -21,7 +21,7 @@ def do_something(sc):
   headers = {}
   response = requests.request("GET", url, headers=headers, data=payload)
   #print(response.text)
-  ini_string = "{ 'LGLS7752a1d2e6':{  'active':'"+data.decode("utf-8")+"',  'brgtotal':'9999'  }  }"
+  ini_string = "{ 'LGLS7752a1d2e6':{  'active':'"+response.text+"',  'brgtotal':'9999'  }  }"
   client.publish("send/to/LGLS7752a1d2e6palm", ini_string)  
   print(data.decode("utf-8"))
   s.enter(1, 1, do_something, (sc,))
