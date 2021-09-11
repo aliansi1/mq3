@@ -28,7 +28,7 @@ def do_something(sc):
 
 client = mqtt.Client()
 client.connect("broker.mqtt-dashboard.com", 1883, 60)    
-s.enter(7, 1, do_something, (s,))
+s.enter(10, 1, do_something, (s,))
 s.run()
 
 
