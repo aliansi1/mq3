@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 #import context  # Ensures paho is in PYTHONPATH
 import paho.mqtt.publish as publish
 import sched, time
-import http.client
+import requests
 
 s = sched.scheduler(time.time, time.sleep)
 def do_something(sc): 
