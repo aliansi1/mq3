@@ -25,13 +25,13 @@ def do_something(sc):
    ini_string = "{ 'LGLS7752a1d2e6':{  'active':'"+response.text+"',  'brgtotal':'9999'  }  }"
    client.publish("send/to/LGLS7752a1d2e6palm", ini_string)  
    #print(data.decode("utf-8"))
-   s.enter(40, 1, do_something, (sc,))
+   s.enter(30, 1, do_something, (sc,))
   except:
    x=1
 
 client = mqtt.Client()
 client.connect("broker.mqtt-dashboard.com", 1883, 60)    
-s.enter(40, 1, do_something, (s,))
+s.enter(30, 1, do_something, (s,))
 s.run()
 
 
