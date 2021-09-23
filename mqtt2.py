@@ -25,7 +25,7 @@ def do_something(sc):
    print("{'data':"+response.text+"}")
    data = json.loads("{\"data\":"+response.text+"}")
 
-   entry1List = [{'topic': "okk", 'payload': "okk"},]
+   entry1List = [{'topic': "okk", 'payload': "okk"}]
    for i in data['data']:
     #client.publish(str(i["topic"]), i)  
      #msgs =msgs+"('"+str(i["topic"])+"','"+ i+"',0,False)," #
