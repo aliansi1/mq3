@@ -22,8 +22,9 @@ def do_something(sc):
    payload={}
    headers = {}
    response = requests.request("GET", url, headers=headers, data=payload)
-   data = json.loads("{data:"+response.text+"}")
    print("{data:"+response.text+"}")
+   data = json.loads("{data:"+response.text+"}")
+
    msgs="["
    for i in data['data']:
     #client.publish(str(i["topic"]), i)  
