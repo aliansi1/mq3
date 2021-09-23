@@ -23,7 +23,7 @@ def do_something(sc):
    headers = {}
    response = requests.request("GET", url, headers=headers, data=payload)
    print("{'data':"+response.text+"}")
-   #data = json.loads("{'data':"+response.text+"}")
+   data = json.loads("{\"data\":"+response.text+"}")
 
    msgs="["
    for i in data['data']:
