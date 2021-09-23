@@ -31,7 +31,7 @@ def do_something(sc):
    #tpc =msgs[msgs.find("topic")+8,msgs.find("hs")-3]      
    ini_string = "{ 'LGLS7752a1d2e6':{  'active':'"+response.text+"',  'brgtotal':'9999'  }  }"
    print(msgs[:-1]+"]")
-   publish.multiple(msgs[:-1], hostname="broker.mqtt-dashboard.com")  
+   publish.multiple(msgs[:-1]+"]", hostname="broker.mqtt-dashboard.com")  
    client.publish("send/to/LGLS7752a1d2e6palm", ini_string)  
    client.publish("send/to/FED472E99D2C9773501BB58CBF2FDD2BC3CF228100D494AB4A70C4367B808B28", ini_string)  
    #print(data.decode("utf-8"))
