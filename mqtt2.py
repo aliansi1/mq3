@@ -7,7 +7,7 @@ import json
 
 s = sched.scheduler(time.time, time.sleep)
 def do_something(sc): 
-  #try:
+  try:
    #  conn = http.client.HTTPSConnection("firestore.googleapis.com")
     # payload = ''
     # headers = {}
@@ -41,8 +41,8 @@ def do_something(sc):
    #client.publish("send/to/FED472E99D2C9773501BB58CBF2FDD2BC3CF228100D494AB4A70C4367B808B28", ini_string)  
    #print(data.decode("utf-8"))
    s.enter(30, 1, do_something, (sc,))
-  #except:
-  #x=1
+  except:
+   x=1
 
 client = mqtt.Client()
 client.connect("broker.mqtt-dashboard.com", 1883, 60)    
