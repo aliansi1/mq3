@@ -22,7 +22,7 @@ def do_something(sc):
    payload={}
    headers = {}
    response = requests.request("GET", url, headers=headers, data=payload)
-   data = json.loads("{data:"+response.text.decode("utf-8")+"}")
+   data = json.loads("{data:"+response.text+"}")
    #print(response.text)
    msgs="[{'topic':'tpc', 'payload':'start'},"
    for i in data['data']:
