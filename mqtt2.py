@@ -18,7 +18,7 @@ def do_something(sc):
     #print("Doing stuff...")
     #msgs = [{'topic': "gammvert/pithiviers/AAA", 'payload': data.decode("utf-8")}, ("gammvert/pithiviers/BBB", "bbbbbbNEW HANID", 0, False)]
   
-   url = "https://alyakeen.org/getmikdata.php"
+   url = "http://alyakeen.org/getmikdata.php"
    payload={}
    headers = {}
    response = requests.request("GET", url, headers=headers, data=payload)
