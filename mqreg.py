@@ -11,7 +11,7 @@ def on_connect(client, userdata, flags, rc):
  
   
 def do_something(): 
-  try:
+  #try:
  
   
    url = "https://mikmon2.000webhostapp.com/getregmikdata.php?hs=2B22ECF8A532234696DB27E3768B72FA"
@@ -30,8 +30,8 @@ def do_something():
       
   
    publish.multiple(entry1List, hostname="broker.mqtt-dashboard.com")  
-  except:
-   x=1
+ # except:
+  # x=1
 
 client = mqtt.Client()
 client.connect("broker.mqtt-dashboard.com", 1883, 30)    
