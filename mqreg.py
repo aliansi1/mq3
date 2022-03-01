@@ -23,6 +23,8 @@ def do_something():
 
    entry1List = []
    print(response.text)
+   client = mqtt.Client()
+   client.connect("broker.mqtt-dashboard.com", 1883, 30) 
    for i in data['data']:
       client.subscribe("shadmik/reg/mikmon/v1/"+str(i["dvc"]))
       print("shadmik/reg/mikmon/v1/"+str(i["dvc"]))
@@ -33,8 +35,7 @@ def do_something():
  # except:
   # x=1
 
-client = mqtt.Client()
-client.connect("broker.mqtt-dashboard.com", 1883, 30)    
+   
 do_something()
 #s.enter(2, 1, do_something, (s,))
 #s.run()
