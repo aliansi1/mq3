@@ -14,7 +14,7 @@ def do_something():
   #try:
  
   
-   url = "https://mikmon2.000webhostapp.com/getregmikdata.php?hs=7126B184305BDBFFA0612C3CAF30B50C4C474C5337373532613164326536"
+   url = "https://mikmon2.000webhostapp.com/getregmikdata.php?hs=2B22ECF8A532234696DB27E3768B72FA"
    payload={}
    headers = {}
    response = requests.request("GET", url, headers=headers, data=payload)
