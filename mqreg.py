@@ -14,7 +14,7 @@ def do_something():
   #try:
  
   
-   url = "https://mikmon2.000webhostapp.com/getregmikdata.php?hs=164F7013E7F798C45DDF18C9A26F02F7636238356632653530333035"
+   url = "https://mikmon2.000webhostapp.com/getregmikdata.php?hs=39703D78AE9C788C483B30B4D7EE47F7"
    payload={}
    headers = {}
    response = requests.request("GET", url, headers=headers, data=payload)
@@ -26,9 +26,9 @@ def do_something():
    client = mqtt.Client()
    client.connect("broker.mqtt-dashboard.com", 1883, 30) 
    for i in data['data']:
-      client.subscribe("shadmik/reg/mikmon/v1/"+str(i["dvc"]))
-      print("shadmik/reg/mikmon/v1/"+str(i["dvc"]))
-      entry1List.append({'topic': "shadmik/reg/mikmon/v1/"+str(i["dvc"]), 'payload':  str(i)})
+      client.subscribe("shadmik/reg/mikmon/v1/"+str(i["39703D78AE9C788C483B30B4D7EE47F7"]))
+      print("shadmik/reg/mikmon/v1/"+str(i["39703D78AE9C788C483B30B4D7EE47F7"]))
+      entry1List.append({'topic': "shadmik/reg/mikmon/v1/"+str(i["39703D78AE9C788C483B30B4D7EE47F7"]), 'payload':  str(i)})
       
   
    publish.multiple(entry1List, hostname="broker.mqtt-dashboard.com")  
