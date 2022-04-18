@@ -26,9 +26,9 @@ def do_something():
    client = mqtt.Client()
    client.connect("broker.mqtt-dashboard.com", 1883, 30) 
    for i in data['data']:
-      client.subscribe("shadmik/reg/mikmon/v1/"+str(i["39703D78AE9C788C483B30B4D7EE47F7"]))
-      print("shadmik/reg/mikmon/v1/"+str(i["39703D78AE9C788C483B30B4D7EE47F7"]))
-      entry1List.append({'topic': "shadmik/reg/mikmon/v1/"+str(i["39703D78AE9C788C483B30B4D7EE47F7"]), 'payload':  str(i)})
+      client.subscribe("shadmik/reg/mikmon/v1/"+str(i["hs"]))
+      print("shadmik/reg/mikmon/v1/"+str(i["hs"]))
+      entry1List.append({'topic': "shadmik/reg/mikmon/v1/"+str(i["hs"]), 'payload':  str(i)})
       
   
    publish.multiple(entry1List, hostname="broker.mqtt-dashboard.com")  
